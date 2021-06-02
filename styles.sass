@@ -1,0 +1,115 @@
+.contMain
+ width: 100%
+ height: 100vh
+.contMain__section1
+.contMain__section1--header
+ display: grid
+ grid-template-columns: 1fr 1fr
+ grid-template-rows: repeat(6, auto )
+ padding: 15px 20px
+ grid-template-areas: 'logo button1' 'title1 title1' 'paragraph1 paragraph1' 'button2 button2' 'img1 img1'
+ align-items: center
+ img:nth-child(1)
+  width: 6.25rem
+  grid-area: logo
+ input:nth-child(2)
+  border: none
+  width: 6.25rem
+  background: hsl(193, 100%, 96%)
+  padding: none
+  grid-area: button1
+  justify-self: end
+ h1
+  grid-area: title1
+ p
+  grid-area: paragraph1
+ input:nth-child(5)
+  grid-area: button2
+  width: 80%
+  justify-self: center
+ img:nth-child(6)
+  grid-area: img1
+  width: 100%
+
+.contMain__section1--header, .contMain__section2, .contMain__section3
+ h1,p,h2
+  text-align: center
+
+.contMain__section2
+ padding: 15px 20px
+ img
+  width: 100%
+
+.contMain__section3
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: repeat(2, auto )
+  grid-template-areas: 'title3' 'paragraph3'
+  h2
+    grid-area: title3
+  input
+    grid-area: paragraph3
+    width: 60%
+    justify-self: center
+.contMain__section4
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: repeat(3, 1fr )
+  grid-template-areas: 'contact' 'links' 'socialNetworks'
+  background: hsl(192, 100%, 9%)
+  p,a
+    color: hsl(193, 100%, 96%)
+  div:nth-child(1)
+    grid-area: contact
+    display: grid
+    grid-template-columns: auto 1fr
+    grid-template-rows: repeat(4,auto )
+    grid-template-areas: 'logoWhite logoWhite' 'iconLocation paragraph4' 'iconPhone numberphone' 'iconEmail email'
+    img:nth-child(1)
+      grid-area: logoWhite
+      width: 6.25rem
+    img:nth-child(2)
+      grid-area: iconLocation 
+    p:nth-child(3)
+      grid-area: paragraph4
+    img:nth-child(4)
+      grid-area: iconPhone
+    p:nth-child(5)
+      grid-area: numberphone
+    img:nth-child(6)
+      grid-area: iconEmail
+    p:nth-child(7)
+      grid-area: email
+  div:nth-child(2)
+    grid-area: links
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-rows: repeat(6,auto )
+    a
+      text-decoration: none  
+  div:nth-child(3)
+    grid-area: socialNetworks
+    display: grid
+    grid-template-columns: repeat(3,auto )
+    grid-template-rows: repeat(2,auto)
+    justify-items: center
+    grid-template-areas: 'iconfacebook iconTwitter iconInstagram' 'copyRight copyRight copyRight'
+    input
+      width: 20px
+    input:nth-child(1)
+      grid-area: iconfacebook
+    input:nth-child(2)
+      grid-area: iconTwitter
+    input:nth-child(3)
+      grid-area: iconInstagram
+    p
+      grid-area: copyRight   
+
+
+
+
+
+
+
+
+

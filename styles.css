@@ -1,1 +1,138 @@
-/*# sourceMappingURL=styles.css.map */
+.contMain {
+  width: 100%;
+  height: 100vh;
+}
+
+.contMain__section1--header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, auto);
+  padding: 15px 20px;
+  grid-template-areas: "logo button1" "title1 title1" "paragraph1 paragraph1" "button2 button2" "img1 img1";
+  align-items: center;
+}
+.contMain__section1--header img:nth-child(1) {
+  width: 6.25rem;
+  grid-area: logo;
+}
+.contMain__section1--header input:nth-child(2) {
+  border: none;
+  width: 6.25rem;
+  background: #ebfbff;
+  padding: none;
+  grid-area: button1;
+  justify-self: end;
+}
+.contMain__section1--header h1 {
+  grid-area: title1;
+}
+.contMain__section1--header p {
+  grid-area: paragraph1;
+}
+.contMain__section1--header input:nth-child(5) {
+  grid-area: button2;
+  width: 80%;
+  justify-self: center;
+}
+.contMain__section1--header img:nth-child(6) {
+  grid-area: img1;
+  width: 100%;
+}
+
+.contMain__section1--header h1, .contMain__section1--header p, .contMain__section1--header h2, .contMain__section2 h1, .contMain__section2 p, .contMain__section2 h2, .contMain__section3 h1, .contMain__section3 p, .contMain__section3 h2 {
+  text-align: center;
+}
+
+.contMain__section2 {
+  padding: 15px 20px;
+}
+.contMain__section2 img {
+  width: 100%;
+}
+
+.contMain__section3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "title3" "paragraph3";
+}
+.contMain__section3 h2 {
+  grid-area: title3;
+}
+.contMain__section3 input {
+  grid-area: paragraph3;
+  width: 60%;
+  justify-self: center;
+}
+
+.contMain__section4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "contact" "links" "socialNetworks";
+  background: #00252e;
+}
+.contMain__section4 p, .contMain__section4 a {
+  color: #ebfbff;
+}
+.contMain__section4 div:nth-child(1) {
+  grid-area: contact;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "logoWhite logoWhite" "iconLocation paragraph4" "iconPhone numberphone" "iconEmail email";
+}
+.contMain__section4 div:nth-child(1) img:nth-child(1) {
+  grid-area: logoWhite;
+  width: 6.25rem;
+}
+.contMain__section4 div:nth-child(1) img:nth-child(2) {
+  grid-area: iconLocation;
+}
+.contMain__section4 div:nth-child(1) p:nth-child(3) {
+  grid-area: paragraph4;
+}
+.contMain__section4 div:nth-child(1) img:nth-child(4) {
+  grid-area: iconPhone;
+}
+.contMain__section4 div:nth-child(1) p:nth-child(5) {
+  grid-area: numberphone;
+}
+.contMain__section4 div:nth-child(1) img:nth-child(6) {
+  grid-area: iconEmail;
+}
+.contMain__section4 div:nth-child(1) p:nth-child(7) {
+  grid-area: email;
+}
+.contMain__section4 div:nth-child(2) {
+  grid-area: links;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-rows: repeat(6, auto);
+}
+.contMain__section4 div:nth-child(2) a {
+  text-decoration: none;
+}
+.contMain__section4 div:nth-child(3) {
+  grid-area: socialNetworks;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-items: center;
+  grid-template-areas: "iconfacebook iconTwitter iconInstagram" "copyRight copyRight copyRight";
+}
+.contMain__section4 div:nth-child(3) input {
+  width: 20px;
+}
+.contMain__section4 div:nth-child(3) input:nth-child(1) {
+  grid-area: iconfacebook;
+}
+.contMain__section4 div:nth-child(3) input:nth-child(2) {
+  grid-area: iconTwitter;
+}
+.contMain__section4 div:nth-child(3) input:nth-child(3) {
+  grid-area: iconInstagram;
+}
+.contMain__section4 div:nth-child(3) p {
+  grid-area: copyRight;
+}/*# sourceMappingURL=styles.css.map */
