@@ -14,6 +14,7 @@
   padding: 15px 20px;
   grid-template-areas: "logo button1" "title1 title1" "paragraph1 paragraph1" "button2 button2" "img1 img1";
   align-items: center;
+  row-gap: 30px;
 }
 .contMain__section1--header img:nth-child(1) {
   width: 6.25rem;
@@ -38,11 +39,16 @@
 }
 .contMain__section1--header h1 {
   grid-area: title1;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.6;
 }
 .contMain__section1--header p {
   grid-area: paragraph1;
   font-family: "Open Sans", sans-serif;
   color: #00252e;
+  font-size: 15px;
 }
 .contMain__section1--header input:nth-child(5) {
   grid-area: button2;
@@ -55,6 +61,7 @@
   color: #ebfbff;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
+  font-size: 12px;
 }
 .contMain__section1--header input:nth-child(5):hover {
   background: #ea96cb;
@@ -64,9 +71,8 @@
   width: 100%;
 }
 
-.contMain__section1--header h1, .contMain__section1--header p, .contMain__section1--header h2, .contMain__section2 h1, .contMain__section2 p, .contMain__section2 h2, .contMain__section3 h1, .contMain__section3 p, .contMain__section3 h2 {
+.contMain__section1--header h2, .contMain__section2 h2, .contMain__section3 h2 {
   text-align: center;
-  line-height: 1.6;
   font-size: 18px;
 }
 .contMain__section1--header h1, .contMain__section1--header h2, .contMain__section2 h1, .contMain__section2 h2, .contMain__section3 h1, .contMain__section3 h2 {
@@ -75,6 +81,10 @@
 }
 .contMain__section1--header input:nth-child(5), .contMain__section2 input:nth-child(5), .contMain__section3 input:nth-child(5) {
   width: 80%;
+}
+.contMain__section1--header p, .contMain__section2 p, .contMain__section3 p {
+  text-align: center;
+  line-height: 1.6;
 }
 
 .contMain__section1--buttonPink {
@@ -92,13 +102,24 @@
 
 .contMain__section2 {
   padding: 15px 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "img" "title" "paragraph";
+  row-gap: 30px;
 }
 .contMain__section2 img {
   width: 100%;
+  grid-area: img;
 }
 .contMain__section2 p {
   font-family: "Open Sans", sans-serif;
+  font-size: 14px;
   color: #808d99;
+  grid-area: paragraph;
+}
+.contMain__section2 h2 {
+  grid-area: title;
 }
 
 .contMain__section3 {
@@ -106,9 +127,19 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, auto);
   grid-template-areas: "title3" "paragraph3";
+  background: #ebfbff;
+  padding: 30px 0;
+  position: relative;
+  bottom: -81px;
+  justify-self: center;
+  width: 96%;
+  border-radius: 15px;
+  row-gap: 20px;
 }
 .contMain__section3 h2 {
   grid-area: title3;
+  font-size: 16px;
+  padding: 0 10px;
 }
 .contMain__section3 input {
   width: 60%;
@@ -123,12 +154,25 @@
 .contMain__section4 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas: "contact" "links" "socialNetworks";
   background: #00252e;
+  padding: 150px 20px 30px 20px;
+  row-gap: 30px;
 }
-.contMain__section4 p, .contMain__section4 a {
+.contMain__section4 div {
+  column-gap: 15px;
+}
+.contMain__section4 div p, .contMain__section4 div a {
   color: #ebfbff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+.contMain__section4 div a {
+  font-size: 14px;
+}
+.contMain__section4 div p {
+  font-size: 13px;
 }
 .contMain__section4 div:nth-child(1) {
   grid-area: contact;
@@ -136,10 +180,11 @@
   grid-template-columns: auto 1fr;
   grid-template-rows: repeat(4, auto);
   grid-template-areas: "logoWhite logoWhite" "iconLocation paragraph4" "iconPhone numberphone" "iconEmail email";
+  row-gap: 20px;
 }
 .contMain__section4 div:nth-child(1) img:nth-child(1) {
   grid-area: logoWhite;
-  width: 6.25rem;
+  width: 9.25rem;
 }
 .contMain__section4 div:nth-child(1) img:nth-child(2) {
   grid-area: iconLocation;
@@ -162,8 +207,9 @@
 .contMain__section4 div:nth-child(2) {
   grid-area: links;
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(6, auto);
+  row-gap: 20px;
 }
 .contMain__section4 div:nth-child(2) a {
   text-decoration: none;
@@ -178,6 +224,7 @@
   grid-template-rows: repeat(2, auto);
   justify-items: center;
   grid-template-areas: "iconfacebook iconTwitter iconInstagram" "copyRight copyRight copyRight";
+  row-gap: 30px;
 }
 .contMain__section4 div:nth-child(3) input {
   width: 30px;

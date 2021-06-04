@@ -15,6 +15,7 @@
  padding: 15px 20px
  grid-template-areas: 'logo button1' 'title1 title1' 'paragraph1 paragraph1' 'button2 button2' 'img1 img1'
  align-items: center
+ row-gap: 30px
  img:nth-child(1)
   width: 6.25rem
   grid-area: logo
@@ -34,11 +35,16 @@
   &:hover
      color: hsl(208, 11%, 55%)
  h1
-  grid-area: title1
+   grid-area: title1
+   font-size: 22px
+   text-align: center
+   font-weight: 400
+   line-height: 1.6
  p
   grid-area: paragraph1
   font-family: 'Open Sans', sans-serif
   color: hsl(192, 100%, 9%)
+  font-size: 15px 
  input:nth-child(5)
   grid-area: button2
   width: 80%
@@ -50,22 +56,24 @@
   color: hsl(193, 100%, 96%)
   font-family: 'Open Sans', sans-serif
   font-weight: 700
+  font-size: 12px
   &:hover
     background: #ea96cb
  img:nth-child(6)
   grid-area: img1
   width: 100%
-
 .contMain__section1--header, .contMain__section2, .contMain__section3
- h1,p,h2
+ h2
   text-align: center
-  line-height: 1.6
   font-size: 18px
  h1, h2
    font-family: 'Poppins', sans-serif
    font-weight: 600
  input:nth-child(5)
    width: 80%
+ p
+   text-align: center
+   line-height: 1.6
 .contMain__section1--buttonPink
   grid-area: button2
   justify-self: center
@@ -77,50 +85,75 @@
   font-family: 'Open Sans', sans-serif
   font-weight: 700
   cursor: pointer
-   
-     
- 
-
 .contMain__section2
  padding: 15px 20px
+ display: grid
+ grid-template-columns: 1fr
+ grid-template-rows: repeat(3, auto )
+ grid-template-areas: 'img' 'title' 'paragraph'
+ row-gap: 30px
  img
   width: 100%
+  grid-area: img
  p
    font-family: 'Open Sans', sans-serif
+   font-size: 14px
    color: hsl(208, 11%, 55%)
-
+   grid-area: paragraph
+ h2
+   grid-area: title
 .contMain__section3
   display: grid
   grid-template-columns: 1fr
   grid-template-rows: repeat(2, auto )
   grid-template-areas: 'title3' 'paragraph3'
+  background: hsl(193, 100%, 96%)
+  padding: 30px 0
+  position: relative
+  bottom: -81px
+  justify-self: center
+  width: 96%
+  border-radius: 15px
+  row-gap: 20px
   h2
     grid-area: title3
+    font-size: 16px
+    padding: 0 10px 
   input
     width: 60%
     grid-area: paragraph3
     justify-self: center
-
   p
    font-family: 'Open Sans', sans-serif
    color: hsl(208, 11%, 55%)
 .contMain__section4
   display: grid
   grid-template-columns: 1fr
-  grid-template-rows: repeat(3, 1fr )
+  grid-template-rows: repeat(3, auto )
   grid-template-areas: 'contact' 'links' 'socialNetworks'
   background: hsl(192, 100%, 9%)
-  p,a
-    color: hsl(193, 100%, 96%)
+  padding: 150px 20px 30px 20px
+  row-gap: 30px
+  div
+    column-gap: 15px
+    p,a
+      color: hsl(193, 100%, 96%)
+      font-family: 'Open Sans', sans-serif
+      line-height: 1.6
+    a
+      font-size: 14px
+    p
+      font-size: 13px
   div:nth-child(1)
     grid-area: contact
     display: grid
     grid-template-columns: auto 1fr
     grid-template-rows: repeat(4,auto )
     grid-template-areas: 'logoWhite logoWhite' 'iconLocation paragraph4' 'iconPhone numberphone' 'iconEmail email'
+    row-gap: 20px
     img:nth-child(1)
       grid-area: logoWhite
-      width: 6.25rem
+      width: 9.25rem
     img:nth-child(2)
       grid-area: iconLocation 
     p:nth-child(3)
@@ -136,8 +169,9 @@
   div:nth-child(2)
     grid-area: links
     display: grid
-    grid-template-rows: 1fr
+    grid-template-columns: 1fr
     grid-template-rows: repeat(6,auto )
+    row-gap: 20px
     a
       text-decoration: none
       &:hover
@@ -149,6 +183,7 @@
     grid-template-rows: repeat(2,auto)
     justify-items: center
     grid-template-areas: 'iconfacebook iconTwitter iconInstagram' 'copyRight copyRight copyRight'
+    row-gap: 30px
     input
       width: 30px
       border: 1px solid hsl(193, 100%, 96%)
@@ -163,8 +198,7 @@
     input:nth-child(3)
       grid-area: iconInstagram
     p
-      grid-area: copyRight   
-
+      grid-area: copyRight
 .containerFooter
   display: grid
   justify-items: center
