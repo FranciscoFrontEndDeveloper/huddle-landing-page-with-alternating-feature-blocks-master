@@ -214,7 +214,73 @@
     &:hover
       text-decoration: underline
 
-
+@media screen and ( min-width: 768px ) and (max-width: 1024px)
+  .contMain__section1--header
+    grid-template-columns: repeat(2,1fr)
+    grid-template-rows: repeat(5, auto )
+    grid-template-areas: 'logo button1' 'title1 img1' 'paragraph1 img1' 'button2 img1'
+    column-gap: 50px
+    img:nth-child(1)
+      width: 12.5rem
+      grid-area: logo
+    h1
+      font-size: 30px
+      text-align: left
+    p
+      font-size: 14px
+      text-align: left
+    input:nth-child(5)
+      width: 55%
+      justify-self: start
+      border: none
+      font-size: 11px
+  .contMain__section2
+    grid-template-columns: repeat(2,1fr)
+    grid-template-rows: repeat(2, auto)
+    grid-template-areas: ' title img' 'paragraph img'
+    h2
+      align-self: end
+      text-align: left
+    p
+      text-align: left
+  .contMain__section2Left
+    grid-template-columns: repeat(2,1fr)
+    grid-template-rows: repeat(2, auto)
+    grid-template-areas: 'img title' ' img paragraph' 
+  .contMain__section3
+    width: 60%  
+  .contMain__section4
+    grid-template-columns: 1fr 1fr auto
+    grid-template-rows: 1fr
+    grid-template-areas: 'contact links socialNetworks'
+    column-gap: 20px
+    img:nth-child(1)
+      grid-area: logoWhite
+      width: 9.25rem
+    div
+      p
+        font-size: 10px
+    div:nth-child(2)
+      grid-area: links
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(3,auto )
+      grid-template-areas: 'link1 link5' 'link4 link3 ' 'link2 link6'
+      a:nth-child(1)
+        grid-area: link1
+      a:nth-child(2)
+        grid-area: link4
+      a:nth-child(3)
+        grid-area: link2
+      a:nth-child(4)
+        grid-area: link5
+      a:nth-child(5)
+        grid-area: link3
+      a:nth-child(6)
+        grid-area: link6
+    div:nth-child(3)
+      p
+        align-self: end
 
 
 
